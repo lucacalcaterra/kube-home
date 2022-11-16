@@ -32,6 +32,8 @@ spec:
     env:
       TZ: ${CONFIG_TIMEZONE}
       EXTRA_JAVA_OPTS: -Duser.timezone=${CONFIG_TIMEZONE}
+      USER_ID: 1000
+      GROUP_ID: 1000
     ingress:
       main:
         enabled: true
