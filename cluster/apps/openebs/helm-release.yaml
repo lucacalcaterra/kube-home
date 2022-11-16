@@ -16,6 +16,13 @@ spec:
         name: openebs
         namespace: flux-system
       interval: 5m
+  install:
+    createNamespace: true
+    remediation:
+      retries: 5
+  upgrade:
+    remediation:
+      retries: 5
   values:
     ndm:
       enabled: false
