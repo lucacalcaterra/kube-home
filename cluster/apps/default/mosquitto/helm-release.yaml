@@ -20,7 +20,7 @@ spec:
     service:
       main:
         type: LoadBalancer
-        loadBalancerIP: ${CONFIG_LB_IP_MOSQUITTO}
+        loadBalancerIP: ${LB_IP_MOSQUITTO}
     #spec:
     # Request this permanent IP address for traefik with MetalLB.
     # Kubernetes Master Node has this ip address mapped in /etc/avahi/hosts
