@@ -16,5 +16,4 @@ resources:
   - nfs-subdir-external-provisioner.yaml
   - openebs.yaml
   - stakater-charts.yaml
-  - truecharts.yaml
   - velero.yaml

@@ -10,10 +10,10 @@ spec:
     spec:
       # renovate: registryUrl=https://k8s-at-home.com/charts/
       chart: openhab
-      version: 4.0.1
+      version: 1.5.2
       sourceRef:
         kind: HelmRepository
-        name: truecharts
+        name: k8s-at-home
         namespace: flux-system
       interval: 5m
   values:
@@ -23,6 +23,12 @@ spec:
       main:
         type: LoadBalancer
         loadBalancerIP: ${CONFIG_LB_IP_OPENHAB}
+    persistence:
+      data:
+        enabled: true
+        accessMode: ReadWriteOnce
+        size: 1Gi
+        persistentVolumeReclaimPolicy: Retain
     env:
       TZ: ${CONFIG_TIMEZONE}
       EXTRA_JAVA_OPTS: -Duser.timezone=${CONFIG_TIMEZONE}
