@@ -5,4 +5,5 @@ resources:
   - namespace.yaml
   - echo-server
   - hajimari
+  - openhab
   - reloader
