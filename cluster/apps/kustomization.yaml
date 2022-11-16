@@ -6,5 +6,5 @@ resources:
   - flux-system
   - kube-system
   - networking
-  - openebs
+  # - openebs # replaced with nfs
   # - system-upgrade
