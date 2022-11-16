@@ -77,6 +77,9 @@ spec:
           - hosts:
               - "openhab.${SECRET_DOMAIN}"
             secretName: "openhab-tls"
+    podAnnotations:
+      backup.velero.io/backup-volumes: data
+
     # # addons vs code
     # addons:
     #   codeserver:
@@ -114,5 +117,3 @@ spec:
     #     volumeMounts:
     #       - name: data
     #         mountPath: /config
-    # podAnnotations:
-    #   backup.velero.io/backup-volumes: data
