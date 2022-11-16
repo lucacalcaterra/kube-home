@@ -8,3 +8,4 @@ resources:
   - networking
   # - openebs # replaced with nfs
   # - system-upgrade
+  - velero
