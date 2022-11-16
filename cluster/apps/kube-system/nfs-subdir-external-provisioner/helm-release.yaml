@@ -8,7 +8,7 @@ spec:
   interval: 15m
   chart:
     spec:
-      chart: metrics-server
+      chart: nfs-subdir-external-provisioner
       version: 4.0.17
       sourceRef:
         kind: HelmRepository
