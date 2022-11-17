@@ -23,6 +23,7 @@ spec:
     remediation:
       retries: 5
   values:
+    archiveOnDelete: false
     nfs:
       server: ${NFS_SERVER_ADDRESS}
       path: ${NFS_KUBEPVCS_PATH}
