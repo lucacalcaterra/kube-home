@@ -9,3 +9,4 @@ resources:
   - metallb
   - k8s-gateway
   - cert-manager
+  - wg-access-server

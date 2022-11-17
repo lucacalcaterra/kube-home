@@ -18,3 +18,4 @@ resources:
   - openebs.yaml
   - stakater-charts.yaml
   - velero.yaml
+  - wg-access-server.yaml

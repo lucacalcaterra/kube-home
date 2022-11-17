@@ -1,0 +1,58 @@
+---
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: wg-access-server
+  namespace: networking
+spec:
+  interval: 15m
+  chart:
+    spec:
+      chart: wg-access-server
+      version: 0.1.0
+      sourceRef:
+        kind: HelmRepository
+        name: wg-access-server
+        namespace: flux-system
+      interval: 15m
+  install:
+    createNamespace: true
+    remediation:
+      retries: 5
+  upgrade:
+    remediation:
+      retries: 5
+  values:
+    # wg-access-server config
+    web:
+      config:
+        adminUsername: ${SECRET_WG_ADMIN_USER}
+        adminPassword: ${SECRET_WG_ADMIN_PASSWORD}
+      #service:
+      #  type: "LoadBalancer"
+      #  loadBalancerIP: ${LB_IP_WG_EASY}
+
+    wireguard:
+      config:
+        privateKey: ${SECRET_WG_PRIV_KEY}
+      service:
+        type: ClusterIP
+        loadBalancerIP: ${LB_IP_WG_EASY}
+
+    persistence:
+      enabled: true
+      size: "100Mi"
+      accessModes:
+        - ReadWriteOnce
+    # ingress:
+    #   namespace: "networking"
+    #   enabled: true
+    #   annotations:
+    #     kubernetes.io/ingress.class: "nginx"
+    #     cert-manager.io/cluster-issuer: "letsencrypt-production"
+    #   hosts:
+    #     - vpn.example.com
+    #   tls:
+    #     - hosts:
+    #         - vpn.example.com
+    #       secretName: wg-access-server-tls
