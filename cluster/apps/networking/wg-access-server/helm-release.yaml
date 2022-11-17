@@ -28,16 +28,14 @@ spec:
       config:
         adminUsername: ${SECRET_WG_ADMIN_USER}
         adminPassword: ${SECRET_WG_ADMIN_PASSWORD}
-      #service:
-      #  type: "LoadBalancer"
-      #  loadBalancerIP: ${LB_IP_WG_EASY}
+      service:
+        type: "LoadBalancer"
+        loadBalancerIP: ${LB_IP_WG_EASY}
 
     wireguard:
       config:
         privateKey: ${SECRET_WG_PRIV_KEY}
       service:
-        annotations:
-          metallb.universe.tf/loadBalancerIPs: ${LB_IP_WG_EASY}
         type: LoadBalancer
         #loadBalancerIP: ${LB_IP_WG_EASY}
 
