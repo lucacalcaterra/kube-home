@@ -23,7 +23,11 @@ spec:
     remediation:
       retries: 5
   values:
-    archiveOnDelete: false
+    storageClass:
+      defaultClass: true
+      reclaimPolicy: retain
+      archiveOnDelete: false
+
     nfs:
       server: ${NFS_SERVER_ADDRESS}
       path: ${NFS_KUBEPVCS_PATH}
