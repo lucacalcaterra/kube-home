@@ -8,12 +8,12 @@ spec:
   interval: 15m
   chart:
     spec:
-      # renovate: registryUrl=https://duyet.github.io/charts
+      # renovate: registryUrl=https://dirsigler.github.io/uptime-kuma-helm
       chart: uptime-kuma
-      version: 0.1.7
+      version: 1.18.0
       sourceRef:
         kind: HelmRepository
-        name: duyet
+        name: dirsigler
         namespace: flux-system
       interval: 15m
   install:
@@ -26,8 +26,6 @@ spec:
 
   values:
     env:
-      - name: "UPTIME_KUMA_PORT"
-        value: "3001"
     # - TZ: ${CONFIG_TIMEZONE}
     ingress:
       enabled: true
@@ -50,7 +48,7 @@ spec:
         - hosts:
             - "uptime-kuma.${SECRET_DOMAIN}"
           secretName: "uptime-kuma"
-    persistence:
+    volume:
       enabled: true
       existingClaim: uptime-kuma-data
     podAnnotations:

@@ -2,8 +2,8 @@
 apiVersion: source.toolkit.fluxcd.io/v1beta2
 kind: HelmRepository
 metadata:
-  name: duyet
+  name: dirsigler
   namespace: flux-system
 spec:
   interval: 1h
-  url: https://duyet.github.io/charts
+  url: https://dirsigler.github.io/uptime-kuma-helm
