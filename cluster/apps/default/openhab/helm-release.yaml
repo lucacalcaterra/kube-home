@@ -82,10 +82,10 @@ spec:
 
     resources:
       requests:
-        cpu: 20m
+        cpu: 50m
         memory: 256Mi
       limits:
-        cpu: 100m
+        cpu: 300m
         memory: 2Gi
 
     # # addons vs code
