@@ -53,3 +53,11 @@ spec:
       existingClaim: uptime-kuma-pvc
     podAnnotations:
       backup.velero.io/backup-volumes: storage
+
+    resources:
+      requests:
+        cpu: 10m
+        memory: 64Mi
+      limits:
+        cpu: 50m
+        memory: 256Mi
