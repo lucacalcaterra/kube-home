@@ -4,7 +4,7 @@ kind: Kustomization
 resources:
   - bitnami-charts.yaml
   - bjw-s-charts.yaml
-  - duyet.yaml
+  - duyet-charts.yaml
   - dysnix-charts.yaml
   - external-dns-charts.yaml
   - hajimari-charts.yaml
@@ -15,8 +15,8 @@ resources:
   - k8s-gateway-charts.yaml
   - metallb-charts.yaml
   - metrics-server-charts.yaml
-  - nfs-subdir-external-provisioner.yaml
-  - openebs.yaml
+  - nfs-subdir-external-provisioner-charts.yaml
+  - openebs-charts.yaml
   - stakater-charts.yaml
-  - velero.yaml
-  - wg-access-server.yaml
+  - velero-charts.yaml
+  - wg-access-server-charts.yaml
