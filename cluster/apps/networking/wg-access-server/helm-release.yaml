@@ -37,7 +37,7 @@ spec:
               template:
                 metadata:
                   annotations:
-                    backup.velero.io/backup-volumes: wg-access-server
+                    backup.velero.io/backup-volumes: data
 
   values:
     # wg-access-server config
