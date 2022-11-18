@@ -6,7 +6,6 @@ metadata:
   labels:
     app: wg-access-server
     app.kubernetes.io/instance: wg-access-server
-    app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: wg-access-server
 data:
   config.yaml: ""
