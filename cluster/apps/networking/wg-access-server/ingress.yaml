@@ -9,7 +9,7 @@ metadata:
     app.kubernetes.io/name: wg-access-server
   annotations:
     cert-manager.io/cluster-issuer: letsencrypt-production
-    external-dns.alpha.kubernetes.io/target: ipv4${SECRET_DOMAIN}
+    external-dns.alpha.kubernetes.io/target: ipv4.${SECRET_DOMAIN}
 spec:
   tls:
     - hosts:
