@@ -23,7 +23,7 @@ spec:
     remediation:
       retries: 5
   # fix missing values deployment
-  postRenders:
+  postRenderers:
     - kustomize:
         # Array of inline strategic merge patch definitions as YAML object.
         # Note, this is a YAML object and not a string, to avoid syntax
