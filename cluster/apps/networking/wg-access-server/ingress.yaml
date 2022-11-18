@@ -17,6 +17,7 @@ spec:
       http:
         paths:
           - path: /
+            pathType: Prefix
             backend:
               service:
                 name: wg-access-server-web
