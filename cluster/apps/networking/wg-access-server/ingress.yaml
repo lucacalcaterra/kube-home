@@ -7,6 +7,9 @@ metadata:
     app.kubernetes.io/instance: wg-access-server
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: wg-access-server
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt-production
+    external-dns.alpha.kubernetes.io/target: ipv4${SECRET_DOMAIN}
 spec:
   tls:
     - hosts:
