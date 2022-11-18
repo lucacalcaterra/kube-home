@@ -50,6 +50,6 @@ spec:
           secretName: "uptime-kuma"
     volume:
       enabled: true
-      existingClaim: uptime-kuma-data
+      existingClaim: uptime-kuma-pvc
     podAnnotations:
       backup.velero.io/backup-volumes: data
