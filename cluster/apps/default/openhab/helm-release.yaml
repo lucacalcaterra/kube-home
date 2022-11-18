@@ -5,7 +5,7 @@ metadata:
   name: openhab
   namespace: default
 spec:
-  interval: 5m
+  interval: 15m
   chart:
     spec:
       # renovate: registryUrl=https://k8s-at-home.com/charts/
@@ -15,7 +15,7 @@ spec:
         kind: HelmRepository
         name: k8s-at-home
         namespace: flux-system
-      interval: 5m
+      interval: 15m
   values:
     image:
       tag: 3.2.0

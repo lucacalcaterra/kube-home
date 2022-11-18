@@ -5,7 +5,7 @@ metadata:
   name: openebs
   namespace: openebs
 spec:
-  interval: 5m
+  interval: 15m
   chart:
     spec:
       # renovate: registryUrl=https://openebs.github.io/charts
@@ -15,7 +15,7 @@ spec:
         kind: HelmRepository
         name: openebs
         namespace: flux-system
-      interval: 5m
+      interval: 15m
   install:
     createNamespace: true
     remediation:
