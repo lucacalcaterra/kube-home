@@ -26,7 +26,7 @@ spec:
 
   values:
     env:
-      TZ: ${CONFIG_TIMEZONE}
+      - TZ: ${CONFIG_TIMEZONE}
     ingress:
       enabled: true
       ingressClassName: "nginx"
