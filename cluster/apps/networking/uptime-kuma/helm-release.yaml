@@ -52,4 +52,4 @@ spec:
       enabled: true
       existingClaim: uptime-kuma-pvc
     podAnnotations:
-      backup.velero.io/backup-volumes: data
+      backup.velero.io/backup-volumes: storage
