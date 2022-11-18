@@ -80,13 +80,13 @@ spec:
     podAnnotations:
       backup.velero.io/backup-volumes: data
 
-    resources:
-      requests:
-        cpu: 50m
-        memory: 256Mi
-      limits:
-        cpu: 300m
-        memory: 2Gi
+    # resources:
+    #   requests:
+    #     cpu: 50m
+    #     memory: 256Mi
+    #   limits:
+    #     cpu: 300m
+    #     memory: 2Gi
 
     # # addons vs code
     # addons:
