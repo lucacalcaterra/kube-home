@@ -26,6 +26,7 @@ spec:
 
   values:
     env:
+      - UPTIME_KUMA_PORT: 3001
     # - TZ: ${CONFIG_TIMEZONE}
     ingress:
       enabled: true
