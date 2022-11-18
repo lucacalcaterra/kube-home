@@ -57,3 +57,5 @@ spec:
     #     - hosts:
     #         - vpn.${SECRET_DOMAIN}"
     #       secretName: wg-access-server-tls
+    podAnnotations:
+      backup.velero.io/backup-volumes: wg-access-server-config
