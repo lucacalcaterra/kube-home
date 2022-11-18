@@ -58,7 +58,6 @@ spec:
     #         - vpn.${SECRET_DOMAIN}"
     #       secretName: wg-access-server-tls
     template:
-      spec:
-        metadata:
-          annotations:
-            backup.velero.io/backup-volumes: wg-access-server-config
+      metadata:
+        annotations:
+          backup.velero.io/backup-volumes: wg-access-server-config
