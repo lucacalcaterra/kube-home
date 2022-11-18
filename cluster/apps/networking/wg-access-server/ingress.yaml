@@ -2,6 +2,7 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: wg-access-server-web
+  namespace: networking
   labels:
     app.kubernetes.io/instance: wg-access-server
     app.kubernetes.io/managed-by: Helm
