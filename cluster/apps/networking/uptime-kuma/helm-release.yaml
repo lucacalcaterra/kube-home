@@ -8,7 +8,7 @@ spec:
   interval: 15m
   chart:
     spec:
-      # renovate: registryUrl=https://dirsigler.github.io/uptime-kuma-helm
+      # renovate: registryUrl=https://duyet.github.io/charts
       chart: uptime-kuma
       version: 0.1.7
       sourceRef:
