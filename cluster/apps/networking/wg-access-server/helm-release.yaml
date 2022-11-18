@@ -22,6 +22,23 @@ spec:
   upgrade:
     remediation:
       retries: 5
+  # fix missing values deployment
+  postRenders:
+    - kustomize:
+        # Array of inline strategic merge patch definitions as YAML object.
+        # Note, this is a YAML object and not a string, to avoid syntax
+        # indention errors.
+        patchesStrategicMerge:
+          - kind: Deployment
+            apiVersion: apps/v1
+            metadata:
+              name: wg-access-server
+            spec:
+              template:
+                metadata:
+                  annotations:
+                    backup.velero.io/backup-volumes: wg-access-server
+
   values:
     # wg-access-server config
     web:
@@ -57,5 +74,3 @@ spec:
     #     - hosts:
     #         - vpn.${SECRET_DOMAIN}"
     #       secretName: wg-access-server-tls
-    annotations:
-      backup.velero.io/backup-volumes: wg-access-server-config
