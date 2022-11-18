@@ -5,3 +5,4 @@ resources:
   - config-pvc.yaml
   #- configmap.yaml
   - helm-release.yaml
+  - ingress.yaml

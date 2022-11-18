@@ -1,0 +1,21 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: wg-access-server-web
+  labels:
+    app.kubernetes.io/instance: wg-access-server
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/name: wg-access-server
+spec:
+  tls:
+    - hosts:
+        - vpn.${SECRET_DOMAIN}"
+      secretName: wg-access-server-tls
+  rules:
+    - host: vpn.${SECRET_DOMAIN}
+      http:
+        paths:
+          - path: /
+            backend:
+              serviceName: wg-access-server-web
+              servicePort: 80
