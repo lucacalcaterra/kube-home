@@ -2,7 +2,7 @@
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: wg-access-server-config
+  name: wg-access-server
   namespace: networking
 spec:
   accessModes:

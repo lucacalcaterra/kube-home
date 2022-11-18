@@ -60,7 +60,7 @@ spec:
           metallb.universe.tf/allow-shared-ip: wg
     persistence:
       enabled: true
-      existingClaim: wg-access-server-config
+      existingClaim: wg-access-server
     # chart BUG (not compatible with new kubernetes versions)
     # ingress:
     #   namespace: "networking"
