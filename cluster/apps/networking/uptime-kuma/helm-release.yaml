@@ -52,7 +52,7 @@ spec:
       enabled: true
       existingClaim: uptime-kuma-pvc
     livenessProbe:
-      initialDelaySeconds: 60
+      initialDelaySeconds: 120
     podAnnotations:
       backup.velero.io/backup-volumes: storage
 
