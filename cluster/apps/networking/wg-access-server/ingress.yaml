@@ -18,5 +18,7 @@ spec:
         paths:
           - path: /
             backend:
-              serviceName: wg-access-server-web
-              servicePort: 80
+              service:
+                name: wg-access-server-web
+                port:
+                  number: 80
