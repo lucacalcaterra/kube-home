@@ -51,6 +51,8 @@ spec:
     volume:
       enabled: true
       existingClaim: uptime-kuma-pvc
+    livenessProbe:
+      initialDelaySeconds: 60
     podAnnotations:
       backup.velero.io/backup-volumes: storage
 
@@ -59,5 +61,5 @@ spec:
         cpu: 50m
         memory: 64Mi
       limits:
-        cpu: 250m
+        cpu: 150m
         memory: 256Mi
