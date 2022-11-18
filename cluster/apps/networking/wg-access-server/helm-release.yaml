@@ -37,7 +37,7 @@ spec:
         privateKey: ${SECRET_WG_PRIV_KEY}
       service:
         type: LoadBalancer
-        #loadBalancerIP: ${LB_IP_WG_EASY}
+        loadBalancerIP: ${LB_IP_WG_EASY}
 
     persistence:
       enabled: true
