@@ -13,10 +13,10 @@ metadata:
 spec:
   tls:
     - hosts:
-        - vpn.${SECRET_DOMAIN}
+        - wg-access-server.${SECRET_DOMAIN}
       secretName: wg-access-server-tls
   rules:
-    - host: vpn.${SECRET_DOMAIN}
+    - host: wg-access-server.${SECRET_DOMAIN}
       http:
         paths:
           - path: /
