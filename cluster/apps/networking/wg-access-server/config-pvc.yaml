@@ -1,0 +1,13 @@
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: wg-access-server-config
+  namespace: networking
+spec:
+  accessModes:
+    - ReadWriteOnce
+  #storageClassName: local-path
+  resources:
+    requests:
+      storage: 128Mi

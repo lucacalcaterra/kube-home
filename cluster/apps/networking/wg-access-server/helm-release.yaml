@@ -41,9 +41,7 @@ spec:
 
     persistence:
       enabled: true
-      size: "100Mi"
-      accessModes:
-        - ReadWriteOnce
+      existingClaim: wg-access-server-config
     # ingress:
     #   namespace: "networking"
     #   enabled: true
