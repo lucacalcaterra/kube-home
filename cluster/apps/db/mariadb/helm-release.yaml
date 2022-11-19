@@ -28,7 +28,7 @@ spec:
       username: admin
       password: ${SECRET_MARIADB_ROOT_PASSWORD}
     volumePermissions:
-      enabled: true
+      enabled: false
     primary:
       persistence:
         enabled: true
