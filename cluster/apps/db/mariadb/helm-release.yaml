@@ -23,6 +23,10 @@ spec:
     remediation:
       retries: 5
   values:
+    auth:
+      rootPassword: ${SECRET_MARIADB_ROOT_PASSWORD}
+      username: admin
+      password: ${SECRET_MARIADB_ROOT_PASSWORD}
     volumePermissions:
       enabled: true
     primary:
