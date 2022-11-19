@@ -33,12 +33,13 @@ spec:
       persistence:
         enabled: true
         existingClaim: mariadb-data
-        podSecurityContext:
-          enabled: true
-          fsGroup: 1000
-        containerSecurityContext:
-          enabled: true
-          runAsUser: 1000
+        storageClass: "openebs-hostpath"
+        # podSecurityContext:
+        #   enabled: true
+        #   fsGroup: 1000
+        # containerSecurityContext:
+        #   enabled: true
+        #   runAsUser: 1000
     podAnnotations:
       backup.velero.io/backup-volumes: data
     # resources:
