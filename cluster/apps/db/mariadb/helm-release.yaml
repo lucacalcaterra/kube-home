@@ -35,10 +35,10 @@ spec:
         existingClaim: mariadb-data
         podSecurityContext:
           enabled: true
-          fsGroup: 0
+          fsGroup: 1000
         containerSecurityContext:
           enabled: true
-          runAsUser: 0
+          runAsUser: 1000
     podAnnotations:
       backup.velero.io/backup-volumes: data
     # resources:
