@@ -23,14 +23,18 @@ spec:
     remediation:
       retries: 5
   values:
-    containerSecurityContext:
-      enabled: true
     volumePermissions:
       enabled: true
     primary:
       persistence:
         enabled: true
         existingClaim: mariadb-data
+        podSecurityContext:
+          enabled: true
+          fsGroup: 0
+        containerSecurityContext:
+          enabled: true
+          runAsUser: 0
     podAnnotations:
       backup.velero.io/backup-volumes: data
     # resources:
