@@ -27,9 +27,8 @@ spec:
       enabled: true
     primary:
       persistence:
-        data:
-          enabled: true
-          existingClaim: mariadb-data
+        enabled: true
+        existingClaim: mariadb-data
     podAnnotations:
       backup.velero.io/backup-volumes: data
     # resources:
