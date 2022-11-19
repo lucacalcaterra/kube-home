@@ -25,7 +25,8 @@ spec:
   values:
     storageClass:
       defaultClass: true
-      reclaimPolicy: Retain
+      # !!! attention
+      reclaimPolicy: Delete
       archiveOnDelete: true
 
     nfs:
