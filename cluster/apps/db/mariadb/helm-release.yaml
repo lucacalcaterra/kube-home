@@ -23,10 +23,11 @@ spec:
     remediation:
       retries: 5
   values:
-    persistence:
-      data:
-        enabled: true
-        existingClaim: mariadb-data
+    primary:
+      persistence:
+        data:
+          enabled: true
+          existingClaim: mariadb-data
     podAnnotations:
       backup.velero.io/backup-volumes: data
     # resources:
