@@ -29,6 +29,8 @@ spec:
       password: ${SECRET_MARIADB_ROOT_PASSWORD}
     volumePermissions:
       enabled: false
+    global:
+      storageClass: "openebs-hostpath"
     primary:
       persistence:
         enabled: true
