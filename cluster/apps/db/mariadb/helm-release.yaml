@@ -23,6 +23,8 @@ spec:
     remediation:
       retries: 5
   values:
+    volumePermissions:
+      enabled: true
     primary:
       persistence:
         data:
