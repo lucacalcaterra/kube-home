@@ -10,5 +10,4 @@ resources:
   - metallb
   - k8s-gateway
   - cert-manager
-  - uptime-kuma
   - wg-access-server
