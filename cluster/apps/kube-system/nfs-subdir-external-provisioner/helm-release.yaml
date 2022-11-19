@@ -26,7 +26,7 @@ spec:
     storageClass:
       defaultClass: true
       reclaimPolicy: Retain
-      archiveOnDelete: false
+      archiveOnDelete: true
 
     nfs:
       server: ${NFS_SERVER_ADDRESS}
