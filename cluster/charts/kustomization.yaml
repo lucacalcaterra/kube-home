@@ -10,6 +10,7 @@ resources:
   - hajimari-charts.yaml
   - ingress-nginx-charts.yaml
   - jetstack-charts.yaml
+  - kong-z-charts.yaml
   - kubereboot-charts.yaml
   - k8s-at-home.yaml
   - k8s-gateway-charts.yaml
