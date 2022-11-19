@@ -23,6 +23,8 @@ spec:
     remediation:
       retries: 5
   values:
+    containerSecurityContext:
+      enabled: true
     volumePermissions:
       enabled: true
     primary:
