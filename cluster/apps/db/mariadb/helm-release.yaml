@@ -36,7 +36,8 @@ spec:
         # podSecurityContext:
         #   enabled: true
         #   fsGroup: 1000
-        # containerSecurityContext:
+        containerSecurityContext:
+          runAsNonRoot: false
         #   enabled: true
         #   runAsUser: 1000
     podAnnotations:
