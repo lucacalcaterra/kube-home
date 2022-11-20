@@ -30,17 +30,17 @@ spec:
       password: ${SECRET_MONGODB_ROOT_PASSWORD}
     volumePermissions:
       enabled: false
-    primary:
-      persistence:
-        enabled: true
-        existingClaim: mongodb-data
-        # podSecurityContext:
-        #   enabled: true
-        #   fsGroup: 1000
-        #containerSecurityContext:
-        #  runAsNonRoot: false
-        #   enabled: true
-        #   runAsUser: 1000
+
+    persistence:
+      enabled: true
+      existingClaim: mongodb-data
+      # podSecurityContext:
+      #   enabled: true
+      #   fsGroup: 1000
+      #containerSecurityContext:
+      #  runAsNonRoot: false
+      #   enabled: true
+      #   runAsUser: 1000
     podAnnotations:
       backup.velero.io/backup-volumes: data
     # resources:
