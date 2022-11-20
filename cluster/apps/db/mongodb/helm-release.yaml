@@ -26,11 +26,11 @@ spec:
   values:
     auth:
       usernames:
-        - admin
+        - username: admin
       passwords:
-        - ${SECRET_MONGODB_ROOT_PASSWORD}
+        - password: ${SECRET_MONGODB_ROOT_PASSWORD}
       databases:
-        - default
+        - database: default
 
       rootPassword: ${SECRET_MONGODB_ROOT_PASSWORD}
       username: admin
