@@ -25,6 +25,10 @@ spec:
       retries: 5
   values:
     auth:
+      usernames[0]: admin
+      passwords[0]: ${SECRET_MONGODB_ROOT_PASSWORD}
+      databases[0]: default
+
       rootPassword: ${SECRET_MONGODB_ROOT_PASSWORD}
       username: admin
       password: ${SECRET_MONGODB_ROOT_PASSWORD}
