@@ -24,8 +24,8 @@ spec:
     remediation:
       retries: 5
   values:
-    image:
-      tag: 4.4.15-debian-10-r8
+    #image:
+    #tag: 4.4.15-debian-10-r8
     auth:
       usernames:
         - username: admin
