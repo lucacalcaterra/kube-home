@@ -24,6 +24,7 @@ spec:
     remediation:
       retries: 5
   values:
+    useStatefulSet: true
     auth:
       usernames:
         - username: admin
