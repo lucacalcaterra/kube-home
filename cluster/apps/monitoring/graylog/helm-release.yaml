@@ -10,7 +10,7 @@ spec:
     spec:
       # renovate: registryUrl=https://charts.kong-z.com/
       chart: graylog
-      version: 2.1.8
+      version: 2.2.0
       sourceRef:
         kind: HelmRepository
         name: kong-z
